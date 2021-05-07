@@ -29,7 +29,6 @@ export const multerOptions = {
     },
 
     filename: (request, file, callback) => {
-      console.log(file);
       callback(null, encryptFileName(file));
     },
   }),
