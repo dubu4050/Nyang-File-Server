@@ -4,6 +4,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { FileModule } from './files/file.module';
 import { join } from 'path';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ResponseModule } from './response/response.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       }),
     }),
     FileModule,
+    ResponseModule,
   ],
 })
 export class AppModule {}
